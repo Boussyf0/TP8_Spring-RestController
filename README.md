@@ -1,14 +1,16 @@
-# JAX-RS Spring Boot Application
+# Spring Boot REST API with Spring MVC
 
-This is a simple RESTful web service built with Spring Boot and JAX-RS (Jersey). It provides basic CRUD operations for a `Compte` (Account) entity.
+This is a simple RESTful web service built with Spring Boot and Spring MVC. It provides basic CRUD operations for a `Compte` (Account) entity.
 
 ## Technologies Used
 
 - Java 17
 - Spring Boot
+- Spring MVC
 - Spring Data JPA
-- JAX-RS (Jersey)
 - H2 in-memory database
+- Swagger (SpringDoc)
+- Jackson (for JSON and XML)
 - Lombok
 - Maven
 
@@ -32,7 +34,14 @@ Make sure to use the following JDBC URL to connect:
 `jdbc:h2:mem:banque`
 
 ![H2 Console](Screen/db-H2.png)
-![H2 Console Test](Screen/test(db-H2).png)
+
+## Swagger UI API Documentation
+
+Interactive API documentation is available via Swagger UI once the application is running.
+
+`http://localhost:8082/swagger-ui.html`
+
+![Swagger UI](Screen/Swagger.png)
 
 ## REST API Endpoints
 
@@ -46,18 +55,29 @@ The API provides the following endpoints to manage bank accounts:
 
 The API supports both JSON and XML formats for requests and responses.
 
-### Postman Tests
+### API Testing Examples
 
-Here are some examples of testing the API with SoapUI:
+Here are some examples of testing the API.
 
-**POST (JSON)**
-![POST JSON](Screen/Post%20methode.png)
+**GET /banque/comptes (JSON)**
+![GET All JSON](Screen/Requête%20GET%20pour%20obtenir%20la%20liste%20des%20comptes%20en%20JSON.png)
+*Response:*
+![JSON Response](Screen/Réponse%20en%20JSON%20pour%20l'endpoint%20:banque:comptes.png)
 
-**POST (XML)**
-![POST XML](Screen/Post-methode(xml).png)
+**GET /banque/comptes (XML)**
+![GET All XML](Screen/Requête%20GET%20pour%20obtenir%20la%20liste%20des%20comptes%20en%20XML.png)
 
-**PUT (XML)**
-![PUT XML](Screen/Put-methode(xml).png)
+**POST /banque/comptes (JSON)**
+![POST JSON](Screen/Requête%20POST%20pour%20créer%20un%20nouveau%20compte%20en%20JSON.png)
 
-**DELETE**
-![DELETE](Screen/Delete-methode.png)
+**POST /banque/comptes (XML)**
+![POST XML](Screen/Requête%20POST%20pour%20créer%20un%20nouveau%20compte%20en%20XML.png)
+
+**PUT /banque/comptes/{id} (JSON)**
+![PUT JSON](Screen/Requête%20PUT%20pour%20mettre%20à%20jour%20un%20compte%20en%20JSON.png)
+
+**PUT /banque/comptes/{id} (XML)**
+![PUT XML](Screen/Requête%20PUT%20pour%20mettre%20à%20jour%20un%20compte%20en%20XML.png)
+
+**DELETE /banque/comptes/{id}**
+![DELETE](Screen/Requête%20DELETE%20pour%20supprimer%20un%20compte.png)
