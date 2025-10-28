@@ -33,7 +33,7 @@ You can access the H2 database console to view the data at the following URL:
 Make sure to use the following JDBC URL to connect:
 `jdbc:h2:mem:banque`
 
-![H2 Console](Screen/db-H2.png)
+![H2 Console](Screen/h2_console.png)
 
 ## Swagger UI API Documentation
 
@@ -41,7 +41,7 @@ Interactive API documentation is available via Swagger UI once the application i
 
 `http://localhost:8082/swagger-ui.html`
 
-![Swagger UI](Screen/Swagger.png)
+![Swagger UI](Screen/swagger_ui.png)
 
 ## REST API Endpoints
 
@@ -60,24 +60,24 @@ The API supports both JSON and XML formats for requests and responses.
 Here are some examples of testing the API.
 
 **GET /banque/comptes (JSON)**
-![GET All JSON](Screen/Requête%20GET%20pour%20obtenir%20la%20liste%20des%20comptes%20en%20JSON.png)
+![GET All JSON](Screen/request_get_all_json.png)
 *Response:*
-![JSON Response](Screen/Réponse%20en%20JSON%20pour%20l'endpoint%20:banque:comptes.png)
+![JSON Response](Screen/response_json.png)
 
 **GET /banque/comptes (XML)**
-![GET All XML](Screen/Requête%20GET%20pour%20obtenir%20la%20liste%20des%20comptes%20en%20XML.png)
+![GET All XML](Screen/request_get_all_xml.png)
 
 **POST /banque/comptes (JSON)**
-![POST JSON](Screen/Requête%20POST%20pour%20créer%20un%20nouveau%20compte%20en%20JSON.png)
+![POST JSON](Screen/request_post_json.png)
 
 **POST /banque/comptes (XML)**
-![POST XML](Screen/Requête%20POST%20pour%20créer%20un%20nouveau%20compte%20en%20XML.png)
+![POST XML](Screen/request_post_xml.png)
 
 **PUT /banque/comptes/{id} (JSON)**
-![PUT JSON](Screen/Requête%20PUT%20pour%20mettre%20à%20jour%20un%20compte%20en%20JSON.png)
+![PUT JSON](Screen/request_put_json.png)
 
 **PUT /banque/comptes/{id} (XML)**
-![PUT XML](Screen/Requête%20PUT%20pour%20mettre%20à%20jour%20un%20compte%20en%20XML.png)
+![PUT XML](Screen/request_put_xml.png)
 
 **DELETE /banque/comptes/{id}**
-![DELETE](Screen/Requête%20DELETE%20pour%20supprimer%20un%20compte.png)
+![DELETE](Screen/request_delete.png)
